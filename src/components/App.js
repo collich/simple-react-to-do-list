@@ -14,10 +14,17 @@ const App = () => {
         setList(updatedList)
     }
 
+    const handleDelete = (id) => {
+        const deleteList = list.filter(li => {
+            return id !== li.id
+        })
+        setList(deleteList)
+    }
+
     return (
         <div>
             <ListCreate onSubmit={handleCreate}/>
-            <TodoList lists={list}/>
+            <TodoList lists={list} onDelete={handleDelete}/>
         </div>
     )
 }

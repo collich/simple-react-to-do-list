@@ -7,10 +7,13 @@ const ListCreate = ({ onSubmit }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         onSubmit(title, description)
+        setTitle('')
+        setDescription('')
     }
 
     const handleChangeTitle = (e) => {
         setTitle(e.target.value)
+
     }
     const handleChangeDescription = (e) => {
         setDescription(e.target.value)
