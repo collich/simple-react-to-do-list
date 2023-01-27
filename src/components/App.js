@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import ListCreate from './ListCreate'
+import TodoList from './TodoList'
 
 const App = () => {
     const [list, setList] = useState([])
@@ -16,6 +17,7 @@ const App = () => {
     return (
         <div>
             <ListCreate onSubmit={handleCreate}/>
+            <TodoList lists={list}/>
         </div>
     )
 }
