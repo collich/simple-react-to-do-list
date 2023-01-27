@@ -21,10 +21,17 @@ const App = () => {
         setList(deleteList)
     }
 
+    const handleEdit = () => {
+
+    }
+
     return (
         <div>
             <ListCreate onSubmit={handleCreate}/>
-            <TodoList lists={list} onDelete={handleDelete}/>
+            
+            <TodoList lists={list} 
+            onDelete={handleDelete} 
+            onEdit={handleEdit}/>
         </div>
     )
 }

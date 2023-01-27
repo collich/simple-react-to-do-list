@@ -1,8 +1,8 @@
 import TodoShow from "./TodoShow"
 
-const TodoList = ({lists, onDelete}) => {
+const TodoList = ({ lists, onDelete, onEdit }) => {
     const renderTodo = lists.map(list => {
-        return <TodoShow key={list.id} list={list} onDelete={onDelete}/>
+        return <TodoShow key={list.id} list={list} onDelete={onDelete} onEdit={onEdit}/>
     })
 
     return (

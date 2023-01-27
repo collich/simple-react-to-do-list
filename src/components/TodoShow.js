@@ -1,17 +1,26 @@
 import { useState } from "react"
+import TodoEdit from "./TodoEdit"
 
-const TodoShow = ({ list, onDelete }) => {
+const TodoShow = ({ list, onDelete, onEdit }) => {
+    const [editState, setEditState] = useState(false)
 
     const handleClickDelete = () => {
         onDelete(list.id)
     }
 
+    const handleClickEdit = () => {
+
+    }
+
+    let content = <div><div>{list.id}. {list.title}</div><p>{list.description}</p>
+
+</div>
+
     return (
         <div  className="book-show">
-            <h2>{list.id}. {list.title}</h2>
-            <p>{list.description}</p>
+            {content}
             <div className="actions">
-                <button className="edit">
+                <button className="edit" onClick={handleClickEdit}>
                     Edit</button>
 
                 <button className="delete" onClick={handleClickDelete}>
