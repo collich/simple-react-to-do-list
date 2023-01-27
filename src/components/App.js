@@ -21,8 +21,15 @@ const App = () => {
         setList(deleteList)
     }
 
-    const handleEdit = () => {
+    const handleEdit = (id, title, description) => {
+        const updatedTodo = list.map(li => {
+            if (li.id === id) {
+                return {...li, title, description}
+            }
+            return li
+        })
 
+        setList(updatedTodo)
     }
 
     return (
