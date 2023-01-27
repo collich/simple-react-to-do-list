@@ -17,13 +17,13 @@ const ListCreate = ({ onSubmit }) => {
     }
 
     return (
-        <div>
+        <div className="book-create">
             <form onSubmit={handleSubmit}>
                 <h3>Title</h3>
-                <input placeholder="What is the title of the list?" onChange={handleChangeTitle} value={title}></input>
+                <input className="input" placeholder="What is the title of the list?" onChange={handleChangeTitle} value={title}></input>
                 <h3>Description</h3>
-                <textarea placeholder="What is the description of the task?" onChange={handleChangeDescription} value={description}></textarea>
-                <button>Submit</button>
+                <textarea className="input" placeholder="What is the description of the task?" onChange={handleChangeDescription} value={description}></textarea>
+                <button className="button">Submit</button>
             </form>
         </div>
     )
